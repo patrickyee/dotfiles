@@ -110,7 +110,7 @@ alias oa='$HOME/venvs/ttam.oktatool/bin/oa'
 alias rpt='mysql -h 127.0.0.1 -u `cat $HOME/.oa_vault_credentials | jq -r .data.username` --password=`cat $HOME/.oa_vault_credentials | jq -r .data.password` coregen_private'
 alias seqseek_37='$HOME/ttam/seqseek/venv/bin/seqseek_37'
 alias seqseek_38='$HOME/ttam/seqseek/venv/bin/seqseek_38'
-alias jupyter-lab='make -C $HOME/venvs/jupyter'
+alias jupyter-lab='make -C $HOME/git/jupyter'
 function o() {
   oa auth -p $@
   export AWS_PROFILE=$@
