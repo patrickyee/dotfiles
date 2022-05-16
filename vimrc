@@ -101,6 +101,7 @@ nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>o :FZF<CR>
 nmap <leader>d :YcmCompleter GoTo<CR>
+nmap <leader>h :let &hls=(&hls == 1 ? 0 : 1)<CR>
 nmap <leader>gb :Git Blame<CR>
 nmap <leader>gg :GitGutterToggle<CR>
 nmap <leader><Tab> <C-w>w
