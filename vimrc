@@ -20,7 +20,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jremmen/vim-ripgrep'
+"Plugin 'jremmen/vim-ripgrep'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'fatih/vim-go'
@@ -49,7 +49,7 @@ au BufNewFile,BufRead *.go
     \ set number |
     \ set relativenumber
 
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.py,*.swift
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
