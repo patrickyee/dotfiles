@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws pyenv fzf docker ripgrep tig terraform)
+plugins=(git aws pyenv fzf docker ripgrep tig terraform vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
