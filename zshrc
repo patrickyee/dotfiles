@@ -111,6 +111,7 @@ alias rpt='mysql -h 127.0.0.1 -u `cat $HOME/.oa_vault_credentials | jq -r .data.
 alias seqseek_37='$HOME/ttam/seqseek/venv/bin/seqseek_37'
 alias seqseek_38='$HOME/ttam/seqseek/venv/bin/seqseek_38'
 alias jupyter-lab='make -C $HOME/git/jupyter'
+alias vi='nvim'
 function o() {
   oa auth -p $@
   export AWS_PROFILE=$@
