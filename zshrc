@@ -7,10 +7,9 @@
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/texlive/2021basic/bin/universal-darwin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/pyee/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -76,6 +75,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 plugins=(git aws pyenv fzf docker ripgrep tig terraform vi-mode)
 
 source $ZSH/oh-my-zsh.sh
@@ -105,17 +108,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias proxy_s3='HTTPS_PROXY=http://127.0.0.1:8888 aws s3 --endpoint-url https://s3.us-west-2.amazonaws.com'
-alias oa='$HOME/venvs/ttam.oktatool/bin/oa'
-alias rpt='mysql -h 127.0.0.1 -u `cat $HOME/.oa_vault_credentials | jq -r .data.username` --password=`cat $HOME/.oa_vault_credentials | jq -r .data.password` coregen_private'
-alias seqseek_37='$HOME/ttam/seqseek/venv/bin/seqseek_37'
-alias seqseek_38='$HOME/ttam/seqseek/venv/bin/seqseek_38'
-alias jupyter-lab='make -C $HOME/git/jupyter'
+
+if [ -f ~/git/work_config/zshrc ]; then
+	source ~/git/work_config/zshrc
+fi
+
 alias vi='nvim'
-function o() {
-  oa auth -p $@
-  export AWS_PROFILE=$@
-}
 export PATH=$HOME/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
