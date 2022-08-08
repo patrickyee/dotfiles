@@ -1,3 +1,5 @@
+require("impatient")
+
 -- plugins
 require("packer").startup(function()
   use "wbthomason/packer.nvim"
@@ -11,6 +13,7 @@ require("packer").startup(function()
   use "airblade/vim-gitgutter"
   use "djoshea/vim-autoread"
   use {"neoclide/coc.nvim", branch="release"}
+  use 'lewis6991/impatient.nvim'
 end)
 
 -- theme and color
