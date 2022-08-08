@@ -14,6 +14,7 @@ require("packer").startup(function()
   use "djoshea/vim-autoread"
   use {"neoclide/coc.nvim", branch="release"}
   use 'lewis6991/impatient.nvim'
+  use "hashivim/vim-terraform"
 end)
 
 -- theme and color
