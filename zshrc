@@ -109,8 +109,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f ~/git/work_config/zshrc ]; then
-	source ~/git/work_config/zshrc
+if [ -f ~/git/ttam-config/zshrc ]; then
+	source ~/git/ttam-config/zshrc
 fi
 
 alias vi='nvim'
