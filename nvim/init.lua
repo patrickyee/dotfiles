@@ -17,9 +17,7 @@ require("packer").startup(function()
       vim.api.nvim_set_keymap("i", "<cr>", "coc#pum#visible() ? coc#pum#confirm() : '<cr>'", {expr=true})
       vim.api.nvim_set_keymap("i", "<esc>", "coc#pum#visible() ? coc#pum#cancel() : '<esc>'", {expr=true})
       vim.api.nvim_set_keymap("i", "<tab>", "coc#pum#visible() ? coc#pum#next(1) : '<tab>'", {expr=true})
-      vim.api.nvim_set_keymap("i", "<Down>", "coc#pum#visible() ? coc#pum#next(1) : '<Down>'", {expr=true})
       vim.api.nvim_set_keymap("i", "<S-tab>", "coc#pum#visible() ? coc#pum#prev(1) : '<S-tab>'", {expr=true})
-      vim.api.nvim_set_keymap("i", "<Up>", "coc#pum#visible() ? coc#pum#prev(1) : '<Up>'", {expr=true})
     end
   }
   use "lewis6991/impatient.nvim"
