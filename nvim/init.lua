@@ -47,7 +47,7 @@ end
 vim.api.nvim_create_autocmd(
   {"BufRead", "BufNewFile"},
   {
-    pattern={"*.lua", "*.js", "*.html", "*.json", "*.yaml", "*.css", "*.sql"},
+    pattern={"*.lua", "*.html", "*.json", "*.yaml", "*.css", "*.sql"},
     callback=function()
       set_number()
       set_indent(2)
@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd(
 vim.api.nvim_create_autocmd(
   {"BufRead", "BufNewFile"},
   {
-    pattern={"*.py", "*.swift", "*Makefile*"},
+    pattern={"*.py", "*.js", "*.swift", "*.dtml", "*Makefile*"},
     callback=function()
       set_number()
       set_indent(4)
@@ -76,6 +76,9 @@ vim.api.nvim_create_autocmd(
     end,
   }
 )
+
+-- mouse support
+vim.cmd [[set mouse=r]]
 
 -- shortcuts
 vim.g.mapleader = " "
