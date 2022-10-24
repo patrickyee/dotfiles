@@ -1,3 +1,4 @@
 {
-  "pyright.disableDiagnostics": true
+  "pyright.disableDiagnostics": true,
+  "inlayHint.enable": false
 }
