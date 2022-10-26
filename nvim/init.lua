@@ -22,6 +22,10 @@ require("packer").startup(function()
   }
   use "lewis6991/impatient.nvim"
   use "hashivim/vim-terraform"
+  use {
+    "tyru/open-browser-github.vim",
+    requires = { "tyru/open-browser.vim" }
+  }
 end)
 
 -- theme and color
