@@ -1,5 +1,8 @@
 require("impatient")
 
+-- python
+vim.g.python3_host_prog = "~/.pyenv/shims/python3"
+
 -- plugins
 require("packer").startup(function()
   use "wbthomason/packer.nvim"
