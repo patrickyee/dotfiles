@@ -13,4 +13,5 @@ if [ -f ~/git/ttam-config/zshrc ]; then
 fi
 
 alias vi='nvim'
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+export EDITOR=nvim

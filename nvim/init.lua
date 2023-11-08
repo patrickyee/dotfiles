@@ -29,6 +29,7 @@ require("packer").startup(function()
     "tyru/open-browser-github.vim",
     requires = { "tyru/open-browser.vim" }
   }
+  use "christoomey/vim-tmux-navigator"
 end)
 
 -- theme and color
