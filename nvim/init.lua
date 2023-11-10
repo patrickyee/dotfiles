@@ -102,6 +102,7 @@ vim.g.mapleader = " "
 vim.api.nvim_set_keymap("n", "<leader>n", ":NERDTreeToggle<cr>", {})
 vim.api.nvim_set_keymap("v", "<leader>r", ":'<,'>OpenGithubFile<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>r", ":OpenGithubFile<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>g", ":BlamerToggle<cr>", {})
 vim.api.nvim_set_keymap("n", "<Tab>", "<C-w>w", {})
 vim.api.nvim_set_keymap("n", "<C-J>", "<C-w><C-J>", {})
 vim.api.nvim_set_keymap("n", "<C-K>", "<C-w><C-K>", {})
