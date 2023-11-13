@@ -32,6 +32,7 @@ require("packer").startup(function()
     requires = { "nvim-lua/plenary.nvim" }
   }
   use "nvim-treesitter/nvim-treesitter"
+  use "romgrk/nvim-treesitter-context"
 end)
 
 -- theme and color
