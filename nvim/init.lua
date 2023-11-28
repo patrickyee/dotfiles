@@ -27,12 +27,11 @@ require("packer").startup(function()
   }
   use "christoomey/vim-tmux-navigator"
   use "APZelos/blamer.nvim"
-  use {
-    "nvim-telescope/telescope.nvim",
-    requires = { "nvim-lua/plenary.nvim" }
-  }
   use "nvim-treesitter/nvim-treesitter"
   use "romgrk/nvim-treesitter-context"
+  use "junegunn/fzf"
+  use "junegunn/fzf.vim"
+  use "itchyny/vim-cursorword"
 end)
 
 -- theme and color
@@ -104,6 +103,9 @@ vim.api.nvim_set_keymap("n", "<leader>n", ":NERDTreeToggle<cr>", {})
 vim.api.nvim_set_keymap("v", "<leader>r", ":'<,'>OpenGithubFile<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>r", ":OpenGithubFile<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>g", ":BlamerToggle<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>o", ":Files<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>f", ":Rg<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>b", ":Buffers<cr>", {})
 vim.api.nvim_set_keymap("n", "<Tab>", "<C-w>w", {})
 vim.api.nvim_set_keymap("n", "<C-J>", "<C-w><C-J>", {})
 vim.api.nvim_set_keymap("n", "<C-K>", "<C-w><C-K>", {})
@@ -112,8 +114,3 @@ vim.api.nvim_set_keymap("n", "<C-H>", "<C-w><C-H>", {})
 vim.api.nvim_set_keymap("n", "<leader>d", "<Plug>(coc-definition)", {})
 vim.api.nvim_set_keymap("n", "<leader>u", "<Plug>(coc-references)", {})
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', {})
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>o", builtin.find_files, {})
-vim.keymap.set("n", "<leader>f", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>b", builtin.buffers, {})
-vim.keymap.set("n", "<leader>h", builtin.help_tags, {})

@@ -8,6 +8,7 @@ eval "$(pyenv init --path)"
 
 plugins=(
 	aws
+	dirhistory
 	docker
 	fzf
 	git
