@@ -32,6 +32,7 @@ require("packer").startup(function()
   use "junegunn/fzf"
   use "junegunn/fzf.vim"
   use "itchyny/vim-cursorword"
+  use "github/copilot.vim"
 end)
 
 -- theme and color
