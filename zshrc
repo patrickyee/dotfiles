@@ -13,7 +13,6 @@ plugins=(
 	fzf
 	git
 	pyenv
-	ripgrep
 	terraform
 	tig
 	vi-mode
