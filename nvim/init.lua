@@ -58,7 +58,7 @@ end
 vim.api.nvim_create_autocmd(
   {"BufRead", "BufNewFile"},
   {
-    pattern={"*.lua", "*.html", "*.json", "*.yaml", "*.css", "*.sql"},
+    pattern={"*.lua", "*.html", "*.json", "*.vue", "*.yaml", "*.css", "*.sql"},
     callback=function()
       set_number()
       set_indent(2)
@@ -70,7 +70,7 @@ vim.api.nvim_create_autocmd(
   {"BufRead", "BufNewFile"},
   {
     pattern={"*.py", "*.js", "*.jsx", "*.swift", "*.dtml", "*Makefile*", "*.c", "*.h", "*.cpp", "*.hpp", "*.sh", "*.zsh",
-             "*.bash"},
+             "*.bash", "*.rs"},
     callback=function()
       set_number()
       set_indent(4)

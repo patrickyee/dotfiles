@@ -27,4 +27,5 @@ fi
 
 alias vi='nvim'
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+export PIPX_HOME=$HOME/.local/pipx
 export EDITOR=nvim
