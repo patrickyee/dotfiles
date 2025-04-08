@@ -28,7 +28,7 @@ require("packer").startup(function()
   use "christoomey/vim-tmux-navigator"
   use "APZelos/blamer.nvim"
   use "nvim-treesitter/nvim-treesitter"
-  use "romgrk/nvim-treesitter-context"
+  use "nvim-treesitter/nvim-treesitter-context"
   use "junegunn/fzf"
   use "junegunn/fzf.vim"
   use "itchyny/vim-cursorword"
@@ -69,7 +69,7 @@ vim.api.nvim_create_autocmd(
 vim.api.nvim_create_autocmd(
   {"BufRead", "BufNewFile"},
   {
-    pattern={"*.py", "*.js", "*.swift", "*.dtml", "*Makefile*", "*.c", "*.h", "*.cpp", "*.hpp", "*.sh", "*.zsh",
+    pattern={"*.py", "*.js", "*.jsx", "*.swift", "*.dtml", "*Makefile*", "*.c", "*.h", "*.cpp", "*.hpp", "*.sh", "*.zsh",
              "*.bash"},
     callback=function()
       set_number()
