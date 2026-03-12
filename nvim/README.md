@@ -10,6 +10,7 @@ This config is aimed at a Zed + Vim workflow:
 - File explorer with `<leader>o`
 - Diagnostics with `[d`, `]d`, and `<leader>e`
 - AI suggestions with GitHub Copilot
+- Tmux pane navigation via `Ctrl-h/j/k/l`
 
 After starting `nvim`, run:
 
