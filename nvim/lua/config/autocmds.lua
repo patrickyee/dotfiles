@@ -14,3 +14,24 @@ vim.api.nvim_create_user_command("UpdateTools", function()
 end, {
   desc = "Update plugins, Mason registry, and Treesitter parsers",
 })
+
+vim.api.nvim_create_autocmd({ "FocusGained", "CursorHold", "CursorHoldI" }, {
+  group = group,
+  pattern = "*",
+  callback = function()
+    if vim.fn.mode() ~= "c" then
+      vim.cmd("checktime")
+    end
+  end,
+  desc = "Reload file if changed outside of Neovim",
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = group,
+  callback = function()
+    vim.defer_fn(function()
+      vim.cmd("LspStart")
+    end, 100)
+  end,
+  desc = "Warm up LSP servers on startup",
+})
