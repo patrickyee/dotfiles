@@ -18,7 +18,7 @@ plugins=(
 	vi-mode
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	zsh-z
+	z
 )
 
 if [ -f ~/git/ttam-config/zshrc ]; then
