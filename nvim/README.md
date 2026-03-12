@@ -8,6 +8,7 @@ This config is aimed at a Zed + Vim workflow:
 - Project search with `<leader>ff` and `<leader>fg`
 - Project replace with `<leader>sr`
 - File explorer with `<leader>o`
+- Code outline with `<leader>a`
 - Diagnostics with `[d`, `]d`, and `<leader>e`
 - AI suggestions with GitHub Copilot
 - Tmux pane navigation via `Ctrl-h/j/k/l`
@@ -42,3 +43,9 @@ Copilot keymaps:
 - Next suggestion: `<M-]>`
 - Previous suggestion: `<M-[>`
 - Dismiss suggestion: `<C-]>`
+
+Other useful keymaps:
+
+- Git status: `<leader>gs`
+- Git log: `<leader>gl`
+- Git commit: `<leader>gc`

@@ -14,6 +14,9 @@ return {
           prompt_prefix = "  ",
           selection_caret = "  ",
           path_display = { "smart" },
+          preview = {
+            treesitter = false,
+          },
           mappings = {
             i = {
               ["<C-j>"] = require("telescope.actions").move_selection_next,
