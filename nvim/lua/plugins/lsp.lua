@@ -107,7 +107,15 @@ return {
             },
           },
         },
-        pyright = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "off",
+              },
+            },
+          },
+        },
         rust_analyzer = {},
         ts_ls = {
           filetypes = {
