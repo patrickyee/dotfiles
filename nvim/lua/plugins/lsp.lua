@@ -18,6 +18,7 @@ return {
         "rust_analyzer",
         "ts_ls",
         "vue_ls",
+        "yamlls",
       },
     },
   },
@@ -129,6 +130,15 @@ return {
           },
         },
         vue_ls = {},
+        yamlls = {
+          settings = {
+            yaml = {
+              format = {
+                enable = false,
+              },
+            },
+          },
+        },
       }
 
       vim.api.nvim_create_autocmd("LspAttach", {
