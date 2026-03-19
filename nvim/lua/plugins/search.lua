@@ -1,38 +1,12 @@
 return {
   {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
-  },
-  {
-    "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "nvim-telescope/telescope-fzf-native.nvim",
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      winopts = {
+        preview = { default = "bat" },
+      },
     },
-    config = function()
-      local telescope = require("telescope")
-
-      telescope.setup({
-        defaults = {
-          prompt_prefix = "  ",
-          selection_caret = "  ",
-          path_display = { "smart" },
-          preview = {
-            treesitter = false,
-          },
-          mappings = {
-            i = {
-              ["<C-j>"] = require("telescope.actions").move_selection_next,
-              ["<C-k>"] = require("telescope.actions").move_selection_previous,
-            },
-          },
-        },
-      })
-
-      telescope.load_extension("fzf")
-    end,
   },
   {
     "MagicDuck/grug-far.nvim",
