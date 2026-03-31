@@ -26,12 +26,3 @@ vim.api.nvim_create_autocmd({ "FocusGained", "CursorHold", "CursorHoldI" }, {
   desc = "Reload file if changed outside of Neovim",
 })
 
-vim.api.nvim_create_autocmd("VimEnter", {
-  group = group,
-  callback = function()
-    vim.defer_fn(function()
-      vim.cmd("LspStart")
-    end, 100)
-  end,
-  desc = "Warm up LSP servers on startup",
-})
