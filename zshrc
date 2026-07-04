@@ -22,6 +22,14 @@ eval "$(fzf --zsh)"
 # zoxide shell integration (used by sesh for smart directory jumping)
 eval "$(zoxide init zsh)"
 
+function t() {
+  if [ -z "$1" ]; then
+    sesh picker
+  else
+    sesh connect "$1"
+  fi
+}
+
 if [ -f ~/git/ttam-config/zshrc ]; then
 	source ~/git/ttam-config/zshrc
 fi
