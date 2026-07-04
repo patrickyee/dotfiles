@@ -34,6 +34,7 @@ alias vi='nvim'
 alias gb='git branch'
 alias gco='git checkout'
 
+export HOMEBREW_NO_ENV_HINTS=1
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 export PIPX_HOME=$HOME/.local/pipx
 export EDITOR=nvim
