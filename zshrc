@@ -19,6 +19,9 @@ autoload -Uz bashcompinit && bashcompinit
 # fzf shell integration
 eval "$(fzf --zsh)"
 
+# zoxide shell integration (used by sesh for smart directory jumping)
+eval "$(zoxide init zsh)"
+
 if [ -f ~/git/ttam-config/zshrc ]; then
 	source ~/git/ttam-config/zshrc
 fi
