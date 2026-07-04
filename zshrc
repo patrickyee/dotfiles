@@ -30,11 +30,14 @@ function t() {
   fi
 }
 
-if [ -f ~/git/ttam-config/zshrc ]; then
-	source ~/git/ttam-config/zshrc
-fi
-
 alias vi='nvim'
+alias gb='git branch'
+alias gco='git checkout'
+
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 export PIPX_HOME=$HOME/.local/pipx
 export EDITOR=nvim
+
+if [ -f ~/git/ttam-config/zshrc ]; then
+	source ~/git/ttam-config/zshrc
+fi
