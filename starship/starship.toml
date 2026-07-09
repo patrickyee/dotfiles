@@ -1,1 +1,22 @@
 add_newline = false
+format = '''$all$fill$aws$time$line_break$character'''
+
+[aws]
+format = '[$symbol($profile )(\[$duration\] )]($style)'
+
+[directory]
+truncate_to_repo = false
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = 'bold green'
