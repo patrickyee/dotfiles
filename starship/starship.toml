@@ -7,6 +7,9 @@ format = '[$symbol($profile )(\[$duration\] )]($style)'
 [directory]
 truncate_to_repo = false
 
+[fill]
+symbol = " "
+
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
