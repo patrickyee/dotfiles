@@ -81,14 +81,6 @@ Leader key: `Space`
 - `gcc`: toggle comment on current line
 - `gc` in visual mode: toggle comment on selection
 
-## Oil file explorer
-
-- `Enter`: open file or directory
-- `-`: go to parent directory
-- `g.`: toggle hidden files
-- `<C-s>`: open in vertical split
-- `<C-h>`: open in horizontal split
-
 ## Search tool behavior
 
 - Telescope (`<leader>ff`, `<leader>fg`, `<leader>fb`):
