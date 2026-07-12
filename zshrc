@@ -44,7 +44,8 @@ if [ -f ~/git/ttam-config/zshrc ]; then
 	source ~/git/ttam-config/zshrc
 fi
 
-if [ -f ~/.ssh/id_rsa ] && ! ssh-add -l 2>/dev/null |
-  grep -qF "$(ssh-keygen -lf ~/.ssh/id_rsa | awk '{print $2}')"; then
-  ssh-add ~/.ssh/id_rsa
-fi
+for key in ~/.ssh/id_rsa ~/.ssh/id_ed25519; do
+  if [ -f "$key" ] && ! ssh-add -l 2>/dev/null | grep -qF "$(ssh-keygen -lf "$key" | awk '{print $2}')"; then
+    ssh-add "$key"
+  fi
+done
