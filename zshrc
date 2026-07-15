@@ -33,6 +33,9 @@ function t() {
 alias vi='nvim'
 alias gb='git branch'
 alias gco='git checkout'
+function gwta() {
+  git worktree add -b "$1" "../$1"
+}
 
 export CONFIG_DIR=$HOME/.config/lazygit
 export HOMEBREW_NO_ENV_HINTS=1
