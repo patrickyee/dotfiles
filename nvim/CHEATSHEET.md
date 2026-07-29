@@ -91,7 +91,7 @@ Leader key: `Space`
 
 ## Treesitter and updates
 
-- `:TSInstall bash css html javascript json lua markdown python regex tsx typescript vim vimdoc yaml`
+- `:TSInstall bash css html javascript json lua markdown markdown_inline python regex tsx typescript vim vimdoc yaml`
 - `:TSUpdate`: update Treesitter parsers
 - `:Mason`: install language servers
 - `:UpdateTools`: run `Lazy sync`, `MasonUpdate`, and `TSUpdate`

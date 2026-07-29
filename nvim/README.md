@@ -12,13 +12,21 @@ This config is aimed at a Zed + Vim workflow:
 - Diagnostics with `[d`, `]d`, and `<leader>e`
 - AI suggestions with GitHub Copilot
 - Tmux pane navigation via `Ctrl-h/j/k/l`
+- Obsidian vault navigation and rendered Markdown
+
+The Obsidian vault defaults to `~/files/notes`. To use a different
+location, export `OBSIDIAN_VAULT` before starting Neovim:
+
+```sh
+export OBSIDIAN_VAULT="$HOME/path/to/your/vault"
+```
 
 After starting `nvim`, run:
 
 ```vim
 :Lazy sync
 :Mason
-:TSInstall bash css html javascript json lua markdown python regex tsx typescript vim vimdoc yaml
+:TSInstall bash css html javascript json lua markdown markdown_inline python regex tsx typescript vim vimdoc yaml
 ```
 
 Install the language servers and formatters you care about in Mason. The config already expects common ones such as `lua_ls`, `pyright`, and `ts_ls`.
@@ -49,3 +57,7 @@ Other useful keymaps:
 - Git status: `<leader>gs`
 - Git log: `<leader>gl`
 - Git commit: `<leader>gc`
+- Open an Obsidian note: `<leader>oo`
+- Create an Obsidian note: `<leader>on`
+- Search Obsidian notes: `<leader>os`
+- Toggle Markdown rendering: `<leader>mr`

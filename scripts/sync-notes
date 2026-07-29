@@ -1,0 +1,54 @@
+#!/bin/sh
+
+set -eu
+
+PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+export PATH
+
+repo="${NOTES_REPO:-/Users/patrick/files/notes}"
+lock_dir="${TMPDIR:-/tmp}/patrick-notes-sync.lock"
+
+log() {
+  printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*"
+}
+
+if ! mkdir "$lock_dir" 2>/dev/null; then
+  log "Another notes sync is already running; skipping."
+  exit 0
+fi
+
+cleanup() {
+  rmdir "$lock_dir"
+}
+trap cleanup EXIT HUP INT TERM
+
+if ! git -C "$repo" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  log "Not a Git repository: $repo"
+  exit 1
+fi
+
+if test -d "$repo/.git/rebase-merge" ||
+  test -d "$repo/.git/rebase-apply" ||
+  test -f "$repo/.git/MERGE_HEAD"; then
+  log "A merge or rebase is already in progress; resolve it manually."
+  exit 1
+fi
+
+branch="$(git -C "$repo" symbolic-ref --quiet --short HEAD)"
+log "Syncing $repo on branch $branch"
+
+git -C "$repo" add --all
+
+if ! git -C "$repo" diff --cached --quiet; then
+  git -C "$repo" commit -m "notes: automatic sync $(date '+%Y-%m-%d %H:%M:%S')"
+  log "Committed local changes."
+fi
+
+if ! git -C "$repo" pull --rebase origin "$branch"; then
+  git -C "$repo" rebase --abort >/dev/null 2>&1 || true
+  log "Pull failed; any in-progress rebase was aborted."
+  exit 1
+fi
+
+git -C "$repo" push origin "$branch"
+log "Sync complete."
