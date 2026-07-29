@@ -1,4 +1,4 @@
-local vault = vim.env.OBSIDIAN_VAULT or "~/files/notes"
+local vault = vim.env.OBSIDIAN_VAULT or "~/git/notes"
 
 return {
   {
