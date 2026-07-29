@@ -5,7 +5,7 @@ set -eu
 PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
 export PATH
 
-repo="${NOTES_REPO:-/Users/patrick/files/notes}"
+repo="${NOTES_REPO:-$HOME/git/notes}"
 lock_dir="${TMPDIR:-/tmp}/patrick-notes-sync.lock"
 
 log() {
