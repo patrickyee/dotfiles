@@ -1,0 +1,48 @@
+{
+  "/Users/pyee/git/ai-assistant": [
+    {
+      "headRefName": "LLMI-1417-update-playground",
+      "number": 925,
+      "title": "LLMI-1417: update v3 playground",
+      "state": "MERGED",
+      "url": "https://github.com/23andme-private/ai-assistant/pull/925",
+      "headRepositoryOwner": "23andme-private"
+    },
+    {
+      "headRefName": "LLMI-1384-area-logic",
+      "number": 901,
+      "title": "LLMI-1384: daily health areas logic",
+      "state": "DRAFT",
+      "checksState": "SUCCESS",
+      "url": "https://github.com/23andme-private/ai-assistant/pull/901",
+      "headRepositoryOwner": "23andme-private"
+    },
+    {
+      "headRefName": "LLMI-1384-handle-th-and-fixture",
+      "number": 891,
+      "title": "LLMI-1384 handle th and fixture",
+      "state": "DRAFT",
+      "checksState": "FAILURE",
+      "url": "https://github.com/23andme-private/ai-assistant/pull/891",
+      "headRepositoryOwner": "23andme-private"
+    },
+    {
+      "headRefName": "LLMI-1384-handle-th-and-fixture",
+      "number": 888,
+      "title": "LLMI-1384: handle TH and test with fixture",
+      "state": "CLOSED",
+      "checksState": "FAILURE",
+      "url": "https://github.com/23andme-private/ai-assistant/pull/888",
+      "headRepositoryOwner": "23andme-private"
+    },
+    {
+      "headRefName": "LLMI-1384-th-fixtures",
+      "number": 890,
+      "title": "LLMI-1384: add new fixtures to cover TH use cases",
+      "state": "CLOSED",
+      "checksState": "FAILURE",
+      "url": "https://github.com/23andme-private/ai-assistant/pull/890",
+      "headRepositoryOwner": "23andme-private"
+    }
+  ]
+}
